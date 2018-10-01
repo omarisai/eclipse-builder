@@ -16,7 +16,7 @@
     <artifactId>eclipse-builder</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>hpi</packaging>
-    <name>Jenkins Eclipse Builder Plugin</name>
+    <name>Eclipse Builder Plugin</name>
     <url>https://github.com/omarisai/eclipse-builder</url>
 
     <scm>
