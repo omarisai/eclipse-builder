@@ -1,0 +1,35 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+    <f:entry title="${%EclipseName}">
+        <select class="setting-input" name="EclipseBuilder.eclipseInstallationName">
+            <j:forEach var="inst" items="${descriptor.installations}">
+                <f:option selected="${inst.name==instance.eclipseInstallationName}">${inst.name}</f:option>
+            </j:forEach>
+        </select>
+    </f:entry>
+
+    <f:entry title="${%WorkspacePath}" field="workspacePath">
+        <f:textbox name="EclipseBuilder.workspacePath" value="${instance.workspacePath}" />
+    </f:entry>
+
+    <f:entry title="${%ProjectsPathsList}" field="ProjectsPathsList">
+        <f:expandableTextbox name="EclipseBuilder.projectsPaths" value="${instance.projectsPaths}" />
+    </f:entry>
+
+    <f:entry title="${%ProjectsToBuild}" field="ProjectsToBuild">
+        <f:expandableTextbox name="EclipseBuilder.buildList" value="${instance.buildList}" />
+    </f:entry>
+
+    <f:entry title="${%Clean}" field="cleanBuild">
+        <f:checkbox name="EclipseBuilder.cleanBuild" value="${instance.cleanBuild}"
+                    checked="${instance.cleanBuild}" default="${descriptor.DEFAULT_CLEAN_BUILD}" />
+    </f:entry>
+
+    <f:entry title="${%FailBuild}" field="failBuild">
+        <f:checkbox name="EclipseBuilder.failBuild" value="${instance.failBuild}"
+                    checked="${instance.failBuild}" default="${descriptor.DEFAULT_FAIL_BUILD}" />
+    </f:entry>
+
+</j:jelly>
