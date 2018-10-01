@@ -20,9 +20,9 @@
     <url>https://github.com/omarisai/eclipse-builder-plugin</url>
 
     <scm>
-        <connection>scm:git:ssh://github.com/omarisai/eclipse-builder-plugin.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/omarisai/eclipse-builder-plugin.git</developerConnection>
-        <url>https://github.com/omarisai/eclipse-builder-plugin.git</url>
+        <connection>scm:git:ssh://github.com/omarisai/eclipse-builder.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/omarisai/eclipse-builder.git</developerConnection>
+        <url>https://github.com/omarisai/eclipse-builder.git</url>
     </scm>
   
     <developers>
